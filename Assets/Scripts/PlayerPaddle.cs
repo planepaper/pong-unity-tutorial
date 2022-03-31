@@ -8,7 +8,6 @@ public class PlayerPaddle : Paddle
     private void Update()
     {
         _direction.y = Input.GetAxis("Vertical") * moveSpeed;
-
     }
 
     private void FixedUpdate()
