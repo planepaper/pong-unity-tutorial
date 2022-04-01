@@ -3,11 +3,10 @@ using UnityEngine;
 public class PlayerPaddle : Paddle
 {
     private Vector2 _direction;
-    private float moveSpeed = 10f;
 
     private void Update()
     {
-        _direction.y = Input.GetAxis("Vertical") * moveSpeed;
+        _direction.y = Input.GetAxis("Vertical") * _moveSpeed;
     }
 
     private void FixedUpdate()

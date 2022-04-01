@@ -10,7 +10,22 @@ public class ComputerPaddle : Paddle
         {
             if (ball.position.y > transform.position.y)
             {
-
+                _rigidbody2D.AddForce(Vector2.up * _moveSpeed);
+            }
+            else if (ball.position.y < transform.position.y)
+            {
+                _rigidbody2D.AddForce(Vector2.down * _moveSpeed);
+            }
+        }
+        else
+        {
+            if (transform.position.y > 0f)
+            {
+                _rigidbody2D.AddForce(Vector2.down * _moveSpeed);
+            }
+            else if (transform.position.y < 0f)
+            {
+                _rigidbody2D.AddForce(Vector2.up * _moveSpeed);
             }
         }
     }
