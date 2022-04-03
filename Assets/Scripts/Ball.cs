@@ -28,4 +28,12 @@ public class Ball : MonoBehaviour
     {
         _rigidbody2D.AddForce(force);
     }
+
+    public void ResetPosition()
+    {
+        _rigidbody2D.position = Vector2.zero;
+        _rigidbody2D.velocity = Vector2.zero;
+
+        AddStartingForce();
+    }
 }
