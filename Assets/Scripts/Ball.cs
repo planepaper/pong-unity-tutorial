@@ -12,10 +12,11 @@ public class Ball : MonoBehaviour
 
     private void Start()
     {
+        ResetPosition();
         AddStartingForce();
     }
 
-    private void AddStartingForce()
+    public void AddStartingForce()
     {
         Vector2 initDirection;
         initDirection.x = Random.value < 0.5f ? -1.0f : 1.0f;
@@ -33,7 +34,5 @@ public class Ball : MonoBehaviour
     {
         _rigidbody2D.position = Vector2.zero;
         _rigidbody2D.velocity = Vector2.zero;
-
-        AddStartingForce();
     }
 }
